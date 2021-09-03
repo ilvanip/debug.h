@@ -50,3 +50,20 @@ void function()
 }
 ```
 
+# Debug output of the test sample:
+```
+[TRACE]>[  6]_main.c::main():
+[TRACE]>[ 14]_|___test.c::add():
+[DEBUG]:[ 15]_|___|___Adding 23 and 45.
+[DEBUG]:[ 16]_|___|___Sum is [68].
+[TRACE]>[  6]_|___|___test.c::sub():
+[DEBUG]:[  7]_|___|___|___Subtracting 23 and 45.
+[DEBUG]:[  8]_|___|___|___Difference is [-22].
+[TRACE]<[  9]_|___|___test.c::sub():
+[TRACE]<[ 18]_|___test.c::add():
+[TRACE]<[  8]_main.c::main():
+```
+### The number seen inside the '[' and ']' at the left is the line number of the corresponding file from which the message was printed.
+### The function name is prefixed with the file name as:
+> <file_name>::<function_name>()
+
